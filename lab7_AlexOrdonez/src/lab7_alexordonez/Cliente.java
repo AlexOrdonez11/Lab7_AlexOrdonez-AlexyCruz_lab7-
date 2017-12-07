@@ -9,18 +9,18 @@ package lab7_alexordonez;
  *
  * @author Alex Ordonez
  */
-public class Producto {
+public class Cliente {
     private String nombre;
-    private double precio;
-    private int tiempo;
+    private int edad;
+    private Orden orden;
 
-    public Producto() {
+    public Cliente() {
     }
 
-    public Producto(String nombre, double precio, int tiempo) {
+    public Cliente(String nombre, int edad, Orden orden) {
         this.nombre = nombre;
-        this.precio = precio;
-        this.tiempo = tiempo;
+        this.edad = edad;
+        this.orden = orden;
     }
 
     public String getNombre() {
@@ -31,20 +31,20 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
-        return precio;
+    public int getEdad() {
+        return edad;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
-    public int getTiempo() {
-        return tiempo;
+    public Orden getOrden() {
+        return orden;
     }
 
-    public void setTiempo(int tiempo) {
-        this.tiempo = tiempo;
+    public void setOrden(Orden orden) {
+        this.orden = orden;
     }
 
     @Override
