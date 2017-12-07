@@ -469,16 +469,18 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        Cajeros l=(Cajeros)cb_cajeros.getSelectedItem();
-        Orden x = null;
+
         actual=new Cliente(c_nombre.getText(),Integer.parseInt(c_edad.getText()),null);
-        x=new Orden(l,actual);
-        l.ordenes.add(x);
-        x.getCliente().setOrden(x);
-        JOptionPane.showMessageDialog(this, x+"  "+actual);
+        
+        JOptionPane.showMessageDialog(this,"  "+actual);
     }//GEN-LAST:event_jButton5MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        Cajeros l=(Cajeros)cb_cajeros.getSelectedItem();
+        Orden x = null;
+        x=new Orden(l,actual);
+        x.getCliente().setOrden(x);
+        actual.getOrden().getCajero().getOrdenes().add(x);
         actual.getOrden().productos.add(((Producto)cb_productos.getSelectedItem()));
     }//GEN-LAST:event_jButton6MouseClicked
 
